@@ -3,10 +3,10 @@ package wmff.sorts;
 import java.util.Comparator;
 import java.util.Random;
 
-public class QuickSort {
-    public static final Random RND = new Random();
+class QuickSort extends AbstractSort {
+    private static final Random RND = new Random();
 
-    public void sort(Object[] array, Comparator comparator) {
+    void sort(Object[] array, Comparator comparator) {
         quickSort(array, 0, array.length - 1, comparator);
     }
 
@@ -29,11 +29,5 @@ public class QuickSort {
         }
         swap(array, index, end);
         return index;
-    }
-
-    private void swap(Object[] array, int index, int end) {
-        Object tmp = array[index];
-        array[index] = array[end];
-        array[end] = tmp;
     }
 }

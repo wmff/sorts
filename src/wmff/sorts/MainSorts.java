@@ -31,6 +31,12 @@ public class MainSorts {
         ss.sort(forSelectionSortArray);
         System.out.println("SelectionSort after: " + Arrays.toString(forSelectionSortArray));
 
+        Object[] forBubbleSortArray = initArray();
+        System.out.println("BubbleSort before: " + Arrays.toString(forBubbleSortArray));
+        BubbleSort bs = new BubbleSort();
+        bs.sort(forBubbleSortArray);
+        System.out.println("SelectionSort after: " + Arrays.toString(forBubbleSortArray));
+
     }
 
     private static Object[] initArray() {
